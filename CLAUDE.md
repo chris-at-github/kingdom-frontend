@@ -15,25 +15,28 @@
 
 ## Stack
 - Sprache/Runtime: TypeScript auf Node.js 24 — ausschließlich im DDEV-Container, kein Host-Node.
-- Framework: React 19, gebaut mit Vite 8.
+- Framework: Next.js 16 (App Router) mit React 19, gebündelt mit Turbopack.
 - Umgebung: DDEV (`type: generic`, `webserver_type: generic`, ohne PHP und ohne DB-Container).
+- Styling: CSS Modules aus dem Next.js-Template, kein Tailwind.
 - Testing: TBD (wird erst im späteren Projektverlauf ergänzt)
-- Linting/Formatting: oxlint aus dem Vite-Template, bewusst nicht weiter eingerichtet.
+- Linting/Formatting: ESLint mit `eslint-config-next`, bewusst nicht Teil des Arbeitsablaufs.
 - Code-Sprache (Bezeichner, Kommentare): Englisch.
 
 ## Befehle
-Alle Befehle laufen im Container. `ddev exec` nutzt das konfigurierte `working_dir`
-(`frontend/`), `ddev npm` dagegen das aktuelle Host-Verzeichnis — Details in
-`docs/guides/ddev.md`.
+Alle Befehle laufen im Container. Die Anwendung liegt im Projekt-Root, daher sind
+`ddev exec` und `ddev npm` hier gleichwertig — Details in `docs/guides/ddev.md`.
 
 - Umgebung starten: `ddev start`
 - Install: `ddev exec npm install`
-- Dev-Server: `ddev exec npm run dev` → <https://kingdom-frontend.ddev.site:5173>
-- Build: `ddev exec npm run build` (Ausgabe in `frontend/dist/`)
-- Lint: `ddev exec npm run lint` (oxlint, noch nicht Teil des Arbeitsablaufs)
+- Dev-Server: `ddev exec npm run dev` → <https://kingdom-frontend.ddev.site:3000>
+- Build: `ddev exec npm run build` (Ausgabe in `.next/`)
+- Build servieren: `ddev exec npm run start` (belegt denselben Port 3000)
+- Lint: `ddev exec npm run lint` (ESLint, noch nicht Teil des Arbeitsablaufs)
 - Test: TBD
 
 ## Struktur
+- `src/app/` — App Router: Routen, Layouts und Seiten.
+- `public/` — statische Dateien, die unverändert ausgeliefert werden.
 - `docs/guides/` — Kurzanleitungen auf Deutsch, Index in `docs/guides/README.md`.
 - `docs/plans/` — Spezifikationsdokumente auf Englisch, abgeschlossene unter `docs/plans/archive/`.
 - `.ddev/` — Container-Konfiguration der Entwicklungsumgebung.

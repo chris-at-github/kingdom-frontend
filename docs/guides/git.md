@@ -45,7 +45,7 @@ geschrieben werden kann.
 | `fix:` | Bugfix | `fix: prevent empty cart checkout` |
 | `docs:` | Dokumentation für Menschen (README, `docs/`, Kommentare) | `docs: document merge workflow` |
 | `refactor:` | Umbau von Produktionscode ohne Verhaltensänderung | `refactor: extract price calculation` |
-| `chore:` | Wartung: Config, Tooling, Dependencies, Aufräumen | `chore: bump vite to 6.2.0` |
+| `chore:` | Wartung: Config, Tooling, Dependencies, Aufräumen | `chore: bump next to 16.4.0` |
 
 **Hinweise:**
 

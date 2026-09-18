@@ -8,7 +8,7 @@ bewusst kurz gehalten und zum Nachschlagen gedacht, nicht zum Durchlesen.
 | Thema | Datei | Inhalt |
 | --- | --- | --- |
 | Git | [git.md](git.md) | Squash-Merge, Commit-Typen |
-| DDEV | [ddev.md](ddev.md) | Umgebung starten, Befehle im Container, Vite-Dev-Server, Build |
+| DDEV | [ddev.md](ddev.md) | Umgebung starten, Befehle im Container, Dev-Server hinter dem Router, Build |
 
 ## Aufbau
 
