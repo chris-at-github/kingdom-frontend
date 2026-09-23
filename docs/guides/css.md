@@ -113,3 +113,4 @@ funktionieren.
 
 - Base UI liefert keine Styles. Zustände werden als `data-*`-Attribute gesetzt
   und im CSS-Modul angesprochen, z. B. `.trigger[data-popup-open] { … }`.
+- Aufbau eigener Komponenten um Base UI: siehe [base-ui.md](base-ui.md).

@@ -18,5 +18,14 @@
     --color-neutral-70: oklch(41% 0 0);
     --color-neutral-80: oklch(32% 0 0);
     --color-neutral-90: oklch(23% 0 0);
+
+    --transition-duration-default: 150ms;
+  }
+
+  /* Disables every transition that uses the duration variables. */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --transition-duration-default: 0s;
+    }
   }
 }
