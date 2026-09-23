@@ -17,7 +17,7 @@
 - Sprache/Runtime: TypeScript auf Node.js 24 — ausschließlich im DDEV-Container, kein Host-Node.
 - Framework: Next.js 16 (App Router) mit React 19, gebündelt mit Turbopack.
 - Umgebung: DDEV (`type: generic`, `webserver_type: generic`, ohne PHP und ohne DB-Container).
-- Styling: CSS Modules aus dem Next.js-Template, kein Tailwind.
+- Styling: globale Styles mit Cascade Layers plus CSS Modules für Komponenten und Module, kein Tailwind.
 - Testing: TBD (wird erst im späteren Projektverlauf ergänzt)
 - Linting/Formatting: ESLint mit `eslint-config-next`, bewusst nicht Teil des Arbeitsablaufs.
 - Code-Sprache (Bezeichner, Kommentare): Englisch.
@@ -36,6 +36,9 @@ Alle Befehle laufen im Container. Die Anwendung liegt im Projekt-Root, daher sin
 
 ## Struktur
 - `src/app/` — App Router: Routen, Layouts und Seiten.
+- `src/styles/` — globale Styles (Layer, Normalize, Variablen, Basis, Utilities), Einstieg `application.css` — Details in `docs/guides/css.md`.
+- `src/components/` — kleine UI-Bausteine, je Ordner mit `.tsx` und `.module.css`.
+- `src/modules/` — eigene Inhaltsbereiche aus Komponenten, gleiches Ordner-Muster.
 - `public/` — statische Dateien, die unverändert ausgeliefert werden.
 - `docs/guides/` — Kurzanleitungen auf Deutsch, Index in `docs/guides/README.md`.
 - `docs/plans/` — Spezifikationsdokumente auf Englisch, abgeschlossene unter `docs/plans/archive/`.

@@ -1,0 +1,9 @@
+/*
+ * Entry point for all global styles, imported once in src/app/layout.tsx.
+ * layers.css must stay the first import to define the cascade layer order.
+ */
+@import "./layers.css";
+@import "./normalize.css";
+@import "./variables.css";
+@import "./base.css";
+@import "./utilities.css";

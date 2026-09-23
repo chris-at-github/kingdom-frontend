@@ -1,0 +1,22 @@
+/*
+ * Design tokens as CSS custom properties.
+ * Note: custom properties cannot be used inside media queries.
+ */
+@layer base {
+  :root {
+    /* Fixed endpoints, kept outside the neutral scale so they stay pure if the grays get tinted. */
+    --color-base-white: oklch(100% 0 0);
+    --color-base-black: oklch(0% 0 0);
+
+    /* Neutral scale from light to dark: 95% to 23% lightness in even 9% steps, so both ends stay distinct from white and black. */
+    --color-neutral-10: oklch(95% 0 0);
+    --color-neutral-20: oklch(86% 0 0);
+    --color-neutral-30: oklch(77% 0 0);
+    --color-neutral-40: oklch(68% 0 0);
+    --color-neutral-50: oklch(59% 0 0);
+    --color-neutral-60: oklch(50% 0 0);
+    --color-neutral-70: oklch(41% 0 0);
+    --color-neutral-80: oklch(32% 0 0);
+    --color-neutral-90: oklch(23% 0 0);
+  }
+}
