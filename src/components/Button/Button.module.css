@@ -19,6 +19,13 @@
     border-color var(--transition-duration-default) ease,
     color var(--transition-duration-default) ease;
 
+  /* Focus ring only for keyboard focus, not for mouse clicks.
+     Placed before :hover, which has a higher specificity (no-descending-specificity). */
+  &:focus-visible {
+    outline: 2px solid var(--color-neutral-90);
+    outline-offset: 2px;
+  }
+
   &:hover:not([data-disabled]) {
     border-color: var(--color-neutral-70);
     background-color: var(--color-neutral-70);
@@ -28,12 +35,6 @@
   &:active:not([data-disabled]) {
     border-color: var(--color-neutral-80);
     background-color: var(--color-neutral-80);
-  }
-
-  /* Focus ring only for keyboard focus, not for mouse clicks. */
-  &:focus-visible {
-    outline: 2px solid var(--color-neutral-90);
-    outline-offset: 2px;
   }
 
   &[data-disabled] {

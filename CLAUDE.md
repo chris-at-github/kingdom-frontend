@@ -19,7 +19,9 @@
 - Umgebung: DDEV (`type: generic`, `webserver_type: generic`, ohne PHP und ohne DB-Container).
 - Styling: globale Styles mit Cascade Layers plus CSS Modules für Komponenten und Module, kein Tailwind.
 - Testing: TBD (wird erst im späteren Projektverlauf ergänzt)
-- Linting/Formatting: ESLint mit `eslint-config-next`, bewusst nicht Teil des Arbeitsablaufs.
+- Linting: ESLint 9 mit `eslint-config-next` (JS/TS) und Stylelint mit `stylelint-config-standard` (CSS) — Details in `docs/guides/lint.md`.
+- Formatting: kein Formatter; der Code-Stil steht in `.editorconfig` (inkl. `ij_*`-Angaben für PhpStorm). Neue und geänderte Dateien müssen `.editorconfig` entsprechen.
+- CSS-Klassennamen: überall kebab-case, auch in CSS-Modulen (`styles["primary-button"]`).
 - Code-Sprache (Bezeichner, Kommentare): Englisch.
 
 ## Befehle
@@ -31,7 +33,8 @@ Alle Befehle laufen im Container. Die Anwendung liegt im Projekt-Root, daher sin
 - Dev-Server: `ddev exec npm run dev` → <https://kingdom-frontend.ddev.site:3000>
 - Build: `ddev exec npm run build` (Ausgabe in `.next/`)
 - Build servieren: `ddev exec npm run start` (belegt denselben Port 3000)
-- Lint: `ddev exec npm run lint` (ESLint, noch nicht Teil des Arbeitsablaufs)
+- Lint: `ddev exec npm run lint` (ESLint + Stylelint; einzeln `lint:js`, `lint:css`)
+- Lint-Fix: `ddev exec npm run lint:fix` (einzeln `lint:js:fix`, `lint:css:fix`)
 - Test: TBD
 
 ## Struktur
@@ -75,6 +78,7 @@ Alle Befehle laufen im Container. Die Anwendung liegt im Projekt-Root, daher sin
 - Niemals committen: `.idea/`, `node_modules/`, `.env*`, Build-Artefakte und andere generierte Dateien. Diese gehören in die `.gitignore`.
 - Erstelle für jedes Feature einen eigenen Branch nach dem Schema `feature/<feature-name>`.
 - Commite eigenständig einzelne Abschnitte aus Plänen.
+- Führe vor jedem Commit `ddev exec npm run lint` aus und behebe Befunde (erst `lint:fix`, dann manuell). Frage mich, bevor ein Befund per Disable-Kommentar oder Konfiguration ausgenommen wird.
 - Commit-Messages auf **Englisch** im Conventional-Commits-Format (`feat:`, `fix:`, `docs:`, `refactor:`, `chore:`).
 - Führe **kein** Push durch.
 - Schreibe die Branch-History nicht um (kein Rebase, kein Squash auf dem Feature-Branch) — die Einzelcommits sind der Arbeitsnachweis.
