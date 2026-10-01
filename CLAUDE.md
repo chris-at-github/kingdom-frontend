@@ -21,10 +21,10 @@
 - Testing: TBD (wird erst im späteren Projektverlauf ergänzt)
 - Linting: ESLint 9 mit `eslint-config-next` (JS/TS) und Stylelint mit `stylelint-config-standard` (CSS) — Details in `docs/guides/lint.md`.
 - Formatting: kein Formatter; der Code-Stil steht in `.editorconfig` (inkl. `ij_*`-Angaben für PhpStorm). Neue und geänderte Dateien müssen `.editorconfig` entsprechen.
-- CSS-Klassennamen: überall kebab-case, auch in CSS-Modulen (`styles["primary-button"]`); BEM-Schreibweise erlaubt (`page__main`, `button--wide`).
 - Code-Sprache (Bezeichner, Kommentare): Englisch.
 
 ## CSS
+- CSS-Klassennamen: überall kebab-case, auch in CSS-Modulen (`styles["primary-button"]`); BEM-Schreibweise erlaubt (`page__main`, `button--wide`).
 - Design-Tokens: Farben, Abstände, Typografie und Transitions kommen ausschließlich aus den Custom Properties in `src/styles/variables.css`, keine fest codierten Werte. Fehlt ein passender Token, frage mich, bevor ein neuer angelegt wird. Ausnahmen: `0`, `100%`, technische Werte ohne Design-Bezug (z. B. `1px` in `.visually-hidden`).
 
 ## Befehle
