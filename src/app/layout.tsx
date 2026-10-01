@@ -4,7 +4,7 @@ import "@/styles/application.css";
 
 // No weight given, so next/font serves Inter as a variable font.
 const inter = Inter({
-  variable: "--font-inter",
+  variable: "--font-family-default",
   subsets: ["latin"],
 });
 

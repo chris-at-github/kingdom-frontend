@@ -14,7 +14,9 @@ importiert nur `application.css`.
 | `layers.css` | Reihenfolge der Layer | – |
 | `normalize.css` | Browser-Defaults angleichen bzw. entfernen | `normalize` |
 | `variables.css` | Design-Tokens als Custom Properties | `base` |
-| `base.css` | Styles für HTML-Elemente und die App-Hülle | `base` |
+| `base.css` | Styles für HTML-Elemente | `base` |
+| `layout.css` | Seitenlayout (`.page`, `.page__main`) in BEM-Schreibweise | `layout` |
+| `typography.css` | Typografie-Klassen wie `.display`, `.display--layout-1` … für Überschriften | `typography` |
 | `utilities.css` | Hilfsklassen wie `.visually-hidden` | `utilities` |
 
 Jede Datei schließt ihre Regeln selbst in ihren Layer ein:
@@ -43,7 +45,7 @@ dasselbe Element treffen?
 gewinnen, unabhängig von der Spezifität der Selektoren:
 
 ```
-normalize  <  base  <  utilities  <  CSS-Module (ohne Layer)
+normalize  <  base  <  layout  <  typography  <  utilities  <  CSS-Module (ohne Layer)
 ```
 
 **Hinweise:**
@@ -52,7 +54,7 @@ normalize  <  base  <  utilities  <  CSS-Module (ohne Layer)
   gegen alle Layer.
 - Folge: Hilfsklassen verlieren gegen Komponenten-Styles. Utilities nur für
   Dinge nutzen, die sich nicht mit Komponenten überschneiden.
-- Kontrolle im Build: `@layer normalize,base,utilities;` muss in der CSS-Datei
+- Kontrolle im Build: `@layer normalize,base,layout,typography,utilities;` muss in der CSS-Datei
   unter `.next/static/chunks/` vor dem ersten `@layer …{` stehen.
 
 ## Wohin gehört ein neuer Style?
@@ -63,6 +65,7 @@ normalize  <  base  <  utilities  <  CSS-Module (ohne Layer)
 
 - Gilt für ein HTML-Element überall (`h1`, `a`, `body`) → `base.css`
 - Wert, der mehrfach verwendet wird (Farbe, Abstand, Schriftgröße) → `variables.css`
+- Seitenlayout, das für alle Seiten gilt (`.page`, `.page__main`) → `layout.css`
 - Einzweck-Hilfsklasse ohne Bezug zu einer Komponente → `utilities.css`
 - Alles, was zu einer Komponente oder einem Modul gehört → dessen CSS-Modul
 
@@ -99,7 +102,7 @@ export function Button() {
 **Problem:** Base UI braucht zwei globale Regeln, damit Popups und Scroll-Lock
 funktionieren.
 
-**Vorgehen:** Beide stehen in `base.css`:
+**Vorgehen:** `.page` steht in `layout.css`, `body` in `base.css`:
 
 - `.page { isolation: isolate; }` — `layout.tsx` umschließt alle Seiten mit
   `<div className="page">`. Der eigene Stacking-Context sorgt dafür, dass

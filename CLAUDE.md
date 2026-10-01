@@ -21,7 +21,7 @@
 - Testing: TBD (wird erst im späteren Projektverlauf ergänzt)
 - Linting: ESLint 9 mit `eslint-config-next` (JS/TS) und Stylelint mit `stylelint-config-standard` (CSS) — Details in `docs/guides/lint.md`.
 - Formatting: kein Formatter; der Code-Stil steht in `.editorconfig` (inkl. `ij_*`-Angaben für PhpStorm). Neue und geänderte Dateien müssen `.editorconfig` entsprechen.
-- CSS-Klassennamen: überall kebab-case, auch in CSS-Modulen (`styles["primary-button"]`).
+- CSS-Klassennamen: überall kebab-case, auch in CSS-Modulen (`styles["primary-button"]`); BEM-Schreibweise erlaubt (`page__main`, `button--wide`).
 - Code-Sprache (Bezeichner, Kommentare): Englisch.
 
 ## Befehle
@@ -39,7 +39,7 @@ Alle Befehle laufen im Container. Die Anwendung liegt im Projekt-Root, daher sin
 
 ## Struktur
 - `src/app/` — App Router: Routen, Layouts und Seiten.
-- `src/styles/` — globale Styles (Layer, Normalize, Variablen, Basis, Utilities), Einstieg `application.css` — Details in `docs/guides/css.md`.
+- `src/styles/` — globale Styles (Layer, Normalize, Variablen, Basis, Layout, Utilities), Einstieg `application.css` — Details in `docs/guides/css.md`.
 - `src/components/` — kleine UI-Bausteine, je Ordner mit `.tsx` und `.module.css`.
 - `src/modules/` — eigene Inhaltsbereiche aus Komponenten, gleiches Ordner-Muster.
 - `public/` — statische Dateien, die unverändert ausgeliefert werden.

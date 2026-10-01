@@ -1,0 +1,12 @@
+/* Shared frame for all demo pages; only spacing, no element styles. */
+.styleguide {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  > section {
+    display: grid;
+    gap: 0.75rem;
+    justify-items: start;
+  }
+}

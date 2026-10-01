@@ -64,7 +64,7 @@ ddev exec npm run lint:css:fix
 
 | Regel | Erwartet |
 | --- | --- |
-| `selector-class-pattern` | Klassennamen in kebab-case, auch in CSS-Modulen |
+| `selector-class-pattern` | Klassennamen in kebab-case, auch in CSS-Modulen; BEM erlaubt (`block__element--modifier`), eigenes Muster in `stylelint.config.mjs` |
 | `import-notation` | `@import url("./datei.css");` |
 | `hue-degree-notation` | Farbton mit Einheit: `oklch(50% 0 0deg)` |
 | `property-no-vendor-prefix` | keine Präfixe — Lightning CSS ergänzt sie beim Build |
