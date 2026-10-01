@@ -19,6 +19,12 @@
     --color-neutral-80: oklch(32% 0 0deg);
     --color-neutral-90: oklch(23% 0 0deg);
 
+    /* Special colors */
+    --color-ruler: var(--color-neutral-40);
+    --color-ruler-active: var(--color-neutral-70);
+    --color-outline: var(--color-neutral-70);
+    --color-background-active: var(--color-neutral-20);
+
     /* Spacing */
     --spacing-10: 2px;
     --spacing-20: 4px;

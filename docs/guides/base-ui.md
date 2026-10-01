@@ -51,7 +51,7 @@ export function Button({ className, ...props }: ButtonProps) {
   Client übergeben werden.
 - Seiten bleiben Server-Komponenten. Teile mit State oder Event-Handlern
   (`useState`, `onClick`) in eine eigene Client-Komponente auslagern, siehe
-  `src/app/components/button/CounterDemo.tsx`.
+  `src/app/prototype/components/_helpers/CounterDemo.tsx`.
 
 **Hinweise:**
 
