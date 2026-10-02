@@ -2,7 +2,7 @@
 .prototype {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-50);
+  gap: var(--spacing-70);
 }
 
 .prototype__section {

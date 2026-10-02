@@ -11,16 +11,18 @@ export const metadata: Metadata = {
 export default function ComponentsPage() {
   return (
     <>
-      <h1>Components</h1>
+      <h1 className="display display--layout-1">Components</h1>
+
+      <Ruler />
 
       <section className={styles.prototype__section}>
-        <h1 className="display display--layout-1">Typography</h1>
-        <h2 className="display display--layout-2">Button</h2>
-        <h3 className="display display--layout-3">Varianten</h3>
+        <h1 className="display display--layout-2">Typography</h1>
 
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
+
+        <h3 className="display display--layout-3">Labore qui commodo</h3>
         <p className="text-large text-important">
           Esse ut maecenas laborum nostrud adipiscing ultricies et proident suscipit excepteur laboris. Velit incididunt adipiscing lorem pariatur incididunt.
         </p>
