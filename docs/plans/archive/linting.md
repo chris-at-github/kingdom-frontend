@@ -67,7 +67,7 @@ host, Node only in the container — a hook would need a running DDEV container.
 verified in the build), `oklch()` hues written as `0deg`, deprecated `clip`
 replaced by `clip-path: inset(50%)`, a comment groups the transition variable
 (`custom-property-empty-line-before`), and `:focus-visible` moved before
-`:hover` in `Button.module.css` (`no-descending-specificity`, no visual change).
+`:hover` in `Ruler.module.css` (`no-descending-specificity`, no visual change).
 
 **No vendor prefix for `text-size-adjust`, no browserslist.** Stylelint flags
 the prefixed properties. The build showed that Lightning CSS adds `-moz-` but

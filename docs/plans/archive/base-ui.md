@@ -21,7 +21,7 @@ The global preparation for Base UI (`.page` wrapper with `isolation: isolate`,
 ## Acceptance Criteria
 
 - [x] `@base-ui/react` is listed as `^1.8.0` in `package.json` and installed.
-- [x] `src/components/Button/Button.tsx` and `Button.module.css` exist.
+- [x] `src/components/Button/Button.tsx` and `Ruler.module.css` exist.
 - [x] `Button` passes through all props of the Base UI `Button` and merges
       `className` (string and function).
 - [x] The button has exactly one style; colors come from `--color-neutral-*` /
@@ -57,7 +57,7 @@ unchanged. Rejected: a narrow, hand-picked prop list.
 `className` as a string or as `(state) => string`. The wrapper prepends the
 module class in both cases.
 
-**`Button.tsx` is a client component (`"use client"`).** A function `className`
+**`Ruler.tsx` is a client component (`"use client"`).** A function `className`
 (created by the wrapper when merging a function) cannot cross the server/client
 boundary. Marking the wrapper as a client component keeps merging inside the
 client. Server components can still render `Button` with serializable props,
