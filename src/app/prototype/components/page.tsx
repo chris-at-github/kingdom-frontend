@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Card } from "@/components/Card/Card";
 import { Button } from "@/components/Button/Button";
 import { Ruler } from "@/components/Ruler/Ruler";
 import { CounterDemo } from "./_helpers/CounterDemo";
@@ -29,6 +30,14 @@ export default function ComponentsPage() {
         <p className="text-small text-muted">
           Irure maecenas nostrud tellus tellus eiusmod ea lorem officia cupidatat laboris ipsum sit proident. Labore qui commodo dolor magna velit labore pariatur fugiat. Qui sunt diam reprehenderit pariatur officia ad quis esse. Maecenas minim dolor veniam et maecenas nostrud reprehenderit adipiscing aliqua nulla do.
         </p>
+      </section>
+
+      <Ruler />
+
+      <section className={styles.prototype__section}>
+        <h2 className="display display--layout-2">Card</h2>
+
+        <Card />
       </section>
 
       <Ruler />

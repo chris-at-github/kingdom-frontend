@@ -1,0 +1,7 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: var(--spacing-50);
+  border: 2px solid var(--color-ruler);
+  border-radius: var(--border-radius-default);
+}
