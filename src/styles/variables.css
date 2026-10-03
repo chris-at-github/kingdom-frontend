@@ -44,7 +44,7 @@
     --font-size-small: 14px;
     --font-size-large: 18px;
     --font-weight-default: 400;
-    --font-weight-medium: 600;
+    --font-weight-medium: 500;
     --font-weight-bold: 700;
     --font-color-default: var(--color-neutral-70);
     --font-color-important: var(--color-base-black);
@@ -60,6 +60,10 @@
 
     /* Transitions */
     --transition-duration-default: 150ms;
+
+    /* Border Radius */
+    --border-radius-small: 2px;
+    --border-radius-default: 3px;
 
     /* Page */
     --page-max-width: 960px;

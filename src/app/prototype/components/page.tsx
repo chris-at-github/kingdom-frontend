@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Button } from "@/components/Button/Button";
+import { Button } from "@/components/Button";
 import { Ruler } from "@/components/Ruler/Ruler";
-import { CounterDemo } from "./_helpers/CounterDemo";
 import styles from "../prototype.module.css";
 
 export const metadata: Metadata = {
@@ -34,16 +33,12 @@ export default function ComponentsPage() {
       <Ruler />
 
       <section className={styles.prototype__section}>
-        <h2>Button</h2>
+        <h2 className="display display--layout-2">Button</h2>
 
-        <h3>Default</h3>
-        <Button>Default</Button>
-
-        <h3>Disabled</h3>
-        <Button disabled>Disabled</Button>
-
-        <h3>Counter</h3>
-        <CounterDemo />
+        <Button.Group>
+          <Button>Default</Button>
+          <Button disabled>Disabled</Button>
+        </Button.Group>
       </section>
     </>
   );
