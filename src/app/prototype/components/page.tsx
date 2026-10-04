@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/Button";
 import { Ruler } from "@/components/Ruler/Ruler";
 import styles from "../prototype.module.css";
@@ -38,6 +39,8 @@ export default function ComponentsPage() {
         <Button.Group>
           <Button>Default</Button>
           <Button disabled>Disabled</Button>
+          <Button.Icon icon={Plus} aria-label="Add" />
+          <Button.Icon icon={Trash2} aria-label="Delete" disabled />
         </Button.Group>
       </section>
     </>

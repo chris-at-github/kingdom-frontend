@@ -31,6 +31,12 @@
   }
 }
 
+/* Square icon-only button; min-width mirrors the min-height of .button. */
+.button--icon {
+  min-width: 41px;
+  padding: var(--spacing-20);
+}
+
 .button-group {
   display: flex;
   flex-wrap: wrap;
