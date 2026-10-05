@@ -1,6 +1,7 @@
 "use client";
 
 import { Button as BaseButton } from "@base-ui/react/button";
+import { joinClassNames } from "@/lib/class-names";
 import styles from "./Button.module.css";
 
 export type ButtonProps = BaseButton.Props;
@@ -14,8 +15,4 @@ export function Button({ className, ...props }: ButtonProps) {
       : joinClassNames(styles.button, className);
 
   return <BaseButton className={mergedClassName} {...props} />;
-}
-
-function joinClassNames(...classNames: (string | undefined)[]) {
-  return classNames.filter(Boolean).join(" ");
 }

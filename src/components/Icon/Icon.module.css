@@ -1,0 +1,6 @@
+/* Scales with the font size of its context. */
+.icon {
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+}
