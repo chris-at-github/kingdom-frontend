@@ -65,6 +65,10 @@
     --border-radius-small: 2px;
     --border-radius-default: 4px;
 
+    /* Icon: 1em is resolved where it is used, so icons scale with their context. */
+    --icon-size: 1em;
+    --icon-stroke-width: 2;
+
     /* Page */
     --page-max-width: 960px;
     --page-spacing-y: 32px;
