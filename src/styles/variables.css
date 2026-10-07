@@ -63,13 +63,12 @@
 
     /* Border Radius */
     --border-radius-small: 2px;
-    --border-radius-default: 3px;
+    --border-radius-default: 4px;
 
     /* Page */
     --page-max-width: 960px;
     --page-spacing-y: 32px;
     --page-spacing-x: 16px;
-    --border-radius-default: 4px;
   }
 
   /* Disables every transition that uses the duration variables. */
