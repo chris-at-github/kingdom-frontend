@@ -1,15 +1,18 @@
-"use client";
-
-import react from "react";
+import type { ComponentProps } from "react";
+import { HousesIcon } from "lucide-react";
+import { Icon } from "@/components/Icon/Icon";
+import { joinClassNames } from "@/lib/class-names";
 import styles from "./Card.module.css";
-import * as React from "react";
 
-interface CardProps extends React.HTMLProps<HTMLDivElement> {
-  children?: React.ReactNode;
-}
+export type CardProps = ComponentProps<"div">;
 
-// Client component: merging a function className creates a new function,
-// which cannot be passed across the server/client boundary.
-export function Card({}: CardProps) {
-  return <div className={styles.card}>CARD</div>
+export function Card({ className, children, ...props }: CardProps) {
+  return (
+    <div className={joinClassNames(styles.card, className)} {...props}>
+      <div className={joinClassNames(styles.card__icon, styles["card__icon--full"])}>
+        <Icon icon={HousesIcon} />
+      </div>
+      {children}
+    </div>
+  );
 }
